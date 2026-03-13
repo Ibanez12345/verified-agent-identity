@@ -1,42 +1,11 @@
-Verifikasi Identitas Manusia
+name: Test Workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      nama_agen:
-        description: "Nama Agen"
-        required: true
-        default: "Ibanez12345"
-      deskripsi_agen:
-        description: "Deskripsi Agen"
-        required: true
-        default: "Ibanez12345 AI Agent"
 
 jobs:
-  verifikasi:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20"
-
-      - name: Install ClawHub
-        run: npx clawhub@latest install verified-agent-identity
-
-      - name: Install dependensi script
-        run: |
-          cd scripts
-          npm install
-
-      - name: Buat Identitas Ethereum baru
-        run: node scripts/createNewEthereumIdentity.js
-
-      - name: Hubungkan Manusia dengan Agen
-        run: |
-          node scripts/manualLinkHumanToAgent.js \
-          --challenge '{"name":"Ibanez12345
+      - name: Test
+        run: echo "Workflow berhasil jalan"
