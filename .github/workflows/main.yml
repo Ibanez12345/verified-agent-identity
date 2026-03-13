@@ -1,4 +1,4 @@
-: Verifikasi Identitas Manusia
+Verifikasi Identitas Manusia
 
 on:
   workflow_dispatch:
