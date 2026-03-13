@@ -1,4 +1,4 @@
-name: Verifikasi Identitas Manusia
+: Verifikasi Identitas Manusia
 
 on:
   workflow_dispatch:
@@ -39,4 +39,4 @@ jobs:
       - name: Hubungkan Manusia dengan Agen
         run: |
           node scripts/manualLinkHumanToAgent.js \
-          --challenge '{"name":"Ibanez12345"}'
+          --challenge '{"name":"Ibanez12345
